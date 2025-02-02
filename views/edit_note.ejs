@@ -1,0 +1,48 @@
+<!-- views/edit_note.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit Note - Note-Taking App</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Header with navigation -->
+    <header>
+      <div class="container">
+        <h1>Edit Note</h1>
+        <nav class="navbar">
+          <a href="/notes">Back to Notes</a>
+          <a href="/dashboard">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Edit note form -->
+    <div class="container">
+      <form action="/notes/edit/<%= note._id %>" method="POST">
+        <input
+          type="text"
+          name="title"
+          placeholder="Title"
+          value="<%= note.title %>"
+          required
+        />
+        <textarea name="content" placeholder="Content" required>
+<%= note.content %></textarea
+        >
+        <button type="submit">Update Note</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; <%= new Date().getFullYear() %> Note-Taking App. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

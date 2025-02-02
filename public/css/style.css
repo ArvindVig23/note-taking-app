@@ -1,0 +1,118 @@
+/* public/css/style.css */
+
+/* Global resets & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.5;
+}
+
+/* Header & Footer */
+header,
+footer {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  border-bottom: none;
+}
+
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 10px;
+}
+
+/* Navigation bar */
+.navbar {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.navbar a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Forms */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* Alert messages */
+.alert {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  border-radius: 3px;
+}
+
+/* Button links */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  margin-top: 8px;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+/* Note listing styles */
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+li {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,51 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Note-Taking App</title>
+    <!-- Link to our custom CSS file -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Header with site title and navigation -->
+    <header>
+      <div class="container">
+        <h1>Note-Taking App</h1>
+        <nav class="navbar">
+          <% if (user) { %>
+          <a href="/dashboard">Dashboard</a>
+          <a href="/auth/logout">Logout</a>
+          <% } else { %>
+          <a href="/auth/login">Login</a>
+          <a href="/auth/register">Register</a>
+          <% } %>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <div class="container">
+      <h2>Welcome to the Modern Note-Taking App</h2>
+      <% if (user) { %>
+      <p>You are logged in as <strong><%= user.username %></strong>.</p>
+      <a href="/dashboard" class="btn">Go to Dashboard</a>
+      <% } else { %>
+      <p>
+        Please <a href="/auth/login">login</a> or
+        <a href="/auth/register">register</a> to continue.
+      </p>
+      <% } %>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; <%= new Date().getFullYear() %> Note-Taking App. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

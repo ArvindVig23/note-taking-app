@@ -1,0 +1,39 @@
+<!-- views/dashboard.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard - Note-Taking App</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Header with navigation -->
+    <header>
+      <div class="container">
+        <h1>Dashboard</h1>
+        <nav class="navbar">
+          <a href="/">Home</a>
+          <a href="/notes">Your Notes</a>
+          <a href="/auth/logout">Logout</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Dashboard content -->
+    <div class="container">
+      <h2>Welcome, <%= user.username %>!</h2>
+      <p>This is your dashboard. From here, you can manage your notes.</p>
+      <a href="/notes" class="btn">Manage Notes</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; <%= new Date().getFullYear() %> Note-Taking App. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

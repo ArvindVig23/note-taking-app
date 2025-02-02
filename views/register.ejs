@@ -1,0 +1,76 @@
+<!-- views/register.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register - Note-Taking App</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Header with navigation -->
+    <header>
+      <div class="container">
+        <h1>Register</h1>
+        <nav class="navbar">
+          <a href="/">Home</a>
+          <a href="/auth/login">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Registration form container -->
+    <div class="container">
+      <!-- Display any validation error messages -->
+      <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+      <div class="alert">
+        <ul>
+          <% errors.forEach(function(error) { %>
+          <li><%= error.msg %></li>
+          <% }); %>
+        </ul>
+      </div>
+      <% } %>
+      <!-- Registration form -->
+      <form action="/auth/register" method="POST">
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          value="<%= typeof username !== 'undefined' ? username : '' %>"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value="<%= typeof email !== 'undefined' ? email : '' %>"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <input
+          type="password"
+          name="password2"
+          placeholder="Confirm Password"
+          required
+        />
+        <button type="submit">Register</button>
+      </form>
+      <p>Already have an account? <a href="/auth/login">Login</a></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; <%= new Date().getFullYear() %> Note-Taking App. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

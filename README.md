@@ -2,7 +2,7 @@
 
 ## Description
 
-The Modern Note-Taking App is a full-stack application built with Node.js, Express, MongoDB Atlas, and Mongoose. It uses EJS for server-side rendering and Passport.js for secure local authentication. The app features a modern, responsive design in which users can register, log in, and manage their personal notes (create, read, update, and delete).
+The Modern Note-Taking App is a full-stack application built with Node.js, Express, MongoDB Atlas, and Mongoose. It uses EJS for server-side rendering and Passport.js for secure local authentication. The app features a responsive design in which users can register, log in, and manage their personal notes (create, read, update, and delete).
 
 ## Features
 
@@ -105,32 +105,6 @@ note-taking-app/
 
 4. **Error Handling & Flash Messages**
    - Deciding how to inform users about errors vs. success states required consistent design and logic throughout the routes
-
-#### Lessons Learned
-
-1. **Clarity in Routing & Middleware**
-
-   - Separating route logic (auth routes, note routes, index routes) keeps the code organized and scalable
-
-2. **Testing Endpoints Early**
-
-   - Using a tool like Postman helped pinpoint issues with:
-     - Request data
-     - Authentication flow
-     - Error handling
-   - Early testing before finalizing the front-end saved development time
-
-3. **Importance of Detailed Documentation**
-
-   - A well-written README can save significant time for:
-     - New collaborators
-     - Future maintenance
-     - Project setup
-
-4. **Iterative UI Refinement**
-   - Starting with a basic layout and iterating to a more minimalist design kept the project's focus on:
-     - Core functionality first
-     - Style and polish as final steps
 
 ### API Documentation
 
@@ -254,3 +228,29 @@ Common issues and their solutions:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+#### Lessons Learned
+
+1. **Clarity in Routing & Middleware**
+
+   - Separating route logic (auth routes, note routes, index routes) keeps the code organized and scalable
+
+2. **Testing Endpoints Early**
+
+   - Using a tool like Postman helped pinpoint issues with:
+     - Request data
+     - Authentication flow
+     - Error handling
+   - Early testing before finalizing the front-end saved development time
+
+3. **Importance of Detailed Documentation**
+
+   - A well-written README can save significant time for:
+     - New collaborators
+     - Future maintenance
+     - Project setup
+
+4. **Iterative UI Refinement**
+   - Starting with a basic layout and iterating to a more minimalist design kept the project's focus on:
+     - Core functionality first
+     - Style and polish as final steps
